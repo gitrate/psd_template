@@ -477,7 +477,53 @@ header {
 .features-block .releases .circle:before {background-color: #feb960;}
 
 
+.work-steps .row-step {
+	position: relative;
+}
+.work-steps img {
+	display: block;
+	margin: 0 auto;
+	width: 556px;
+}
+.work-steps img {
+	display: block;
+	margin: 0 auto;
+	width: 556px;
+}
+.work-steps .absolute-block {
+	position: absolute;
+	top: -50px;
+	height: 300px;
+	padding:35px 60px 50px 35px;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.05);
+	background: #fff;
+	border-bottom: 3px solid transparent;
+	max-width: 460px;
+}
+.work-steps .absolute-block .absolute-left { left: 0;}
+.work-steps .absolute-block .absolute-right { right: 50px;}
+.work-steps .absolute-block .red-border {border-color: #fc5f45;}
+.work-steps .absolute-block .green-border {border-color: #38c695;}
+.work-steps .absolute-block .blue-border {border-color: #b27cf5;}
+.work-steps .absolute-block .yellow-border {border-color: #feb960;}
 
+.row-step .inner-holder {
+	padding: 30px 0 0 85px;
+	position: relative;
+}
+.row-step .inner-holder:before {
+	content: attr(data-innernumber);
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #e0e0e0;
+	font: 700 50px/1 'Libre Baskerville', serif;
+}
+.row-step h3 {
+	color: #272727;
+	margin-bottom: 20px;
+	font: 400 25px/1 'Poppins', sans-serif;
+}
 
 
 
