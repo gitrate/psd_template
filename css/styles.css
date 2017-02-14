@@ -6,7 +6,10 @@
 */
 
 *{box-sizing: border-box;}
-html, body {height: auto;}
+html, body {height: auto;
+	overflow-x: hidden;
+	width:100%;
+}
 body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
@@ -39,6 +42,11 @@ ul {
 a {
 	display: inline-block;
 	text-decoration: none;
+}
+
+img {
+	display: inline-block;
+	max-width: 100%;
 }
 
 .content-wrapper {
@@ -120,8 +128,17 @@ a {
 header {
 	padding: 24px 0;
 }
-
-
+.burger {
+	display: none;
+	float: right;
+	font-size: 24px;
+	line-height: 1;
+	color: #272727;
+}
+.burger:before {
+	content: '\f0c9';
+	font-family: 'FontAwesome';
+}
 .welcome-block {
 	padding: 160px 0;
 	text-align: center;
@@ -500,8 +517,8 @@ header {
 	border-bottom: 3px solid transparent;
 	max-width: 460px;
 }
-.work-steps .absolute-block .absolute-left { left: 0;}
-.work-steps .absolute-block .absolute-right { right: 50px;}
+.work-steps .absolute-block.absolute-left { left: 0;}
+.work-steps .absolute-block.absolute-right { right: 0;}
 .work-steps .absolute-block .red-border {border-color: #fc5f45;}
 .work-steps .absolute-block .green-border {border-color: #38c695;}
 .work-steps .absolute-block .blue-border {border-color: #b27cf5;}
@@ -525,9 +542,75 @@ header {
 	font: 400 25px/1 'Poppins', sans-serif;
 }
 
+/* media query */
 
+@media screen and (max-width:1140px) {
+	.about-article {
+		position: relative;
+		top: auto;
+		right: auto;
+		margin: 0 auto;
+		transform: none;
+		max-width: 100%;
+	}
+	.about-block img {
+		display: block;
+		margin: 0 auto;
+	}
+	.content-wrapper,
+	header {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.description-part .share-icon {
+		display: none;
+	}
+	.article-about .soc-part {
+		/* display: inline-block; */
+		margin: 25px 0 0;
+		text-align: center;
+		width: 100%;
+	}
+	.article-about .soc-part li {
+		display: inline-block;
+		margin: 10px;
+	}
+	.article-about .description-part {
+	border-right: 0;
+	padding-right: 0;
+	padding-bottom: 10px;
+	}
+	.article-about .soc-part li:last-child {
+		margin: 10px;
+	}
 
-
+}
+@media screen and (max-width:1024px) {
+	.head-menu ul {
+		position: absolute;
+		top: -100%;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #fff;
+		z-index: 10;
+		padding: 100px;
+		transition: ease-in-out 0.2s transform;
+	}
+	.head-menu ul.active,
+	.burger:hover + .head-menu ul	{
+		transform: translateY(100%);
+	}
+	.head-menu li {
+		display: block;
+		text-align: center;
+		margin: 0 0 15px;
+	}
+	.burger {display: block;}
+}
+.description-part .share-icon {
+	padding: 0;
+}
 
 
 
