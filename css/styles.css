@@ -645,11 +645,14 @@ header {
 	color: #272727;
 	font: 400 30px/1 'Poppins', sans-serif;
 	margin-bottom: 50px;
+	text-align: center;
 }
 .subscribe-block .input-holder {
 	max-width: 480px;
 	margin: 0 auto;
 	position: relative;
+	border-radius: 25px;
+	overflow: hidden;
 }
 .subscribe-block .input-holder input {
 	padding-right: 200px;
@@ -658,9 +661,27 @@ header {
 	border: 2px solid #efefef;
 	background-color: #f7f7f7;
 	height: 50px;
+	transition: all 0.5s ease-in-out;
 }
-.subscribe-block .input-holder button["submit"] {
-	2:41:48
+.subscribe-block .input-holder input[type="email"]:focus {
+	outline: none;
+}
+.subscribe-block .input-holder button[type="submit"] {
+	cursor: pointer;
+	position: absolute;
+	right:0;
+	top: 0;
+	height: 100%;
+	width: 180px;
+	background: #fc5f45;
+	color: #fff;
+	font: 600 16px/50px 'Poppins', sans-serif;
+	border: none;
+	text-transform: uppercace;
+	transition: background 0.5s ease-in-out;
+}
+.subscribe-block .input-holder button[type="submit"]:hover {
+	background: #f43636;
 }
 
 
